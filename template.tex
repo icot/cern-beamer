@@ -1,0 +1,85 @@
+% REf: https://en.wikibooks.org/wiki/LaTeX/Presentations
+
+\documentclass{beamer}
+
+% Preamble
+\title{Stuff we want to talk about}
+\author[A.u.thor]{Guy talking about the stuff \\ \texttt{author@email} \and Guy2}
+\date{\today}
+
+%\useoutertheme{}
+%\useinnertheme{}
+
+% Colors
+\definecolor{bluecern}{HTML}{0053A1}
+\setbeamercolor{normal text}{fg=bluecern, bg=white}
+\setbeamercolor{title}{fg=bluecern, bg=white}
+\setbeamercolor{inverted normal text}{fg=white, bg=bluecern}
+
+% Footline
+\setbeamerfont{footline}{size=\large}
+\setbeamertemplate{footline}{
+    \begin{beamercolorbox}[ht=30px, center]{inverted normal text}
+        \inserttitle \hfill \insertshortauthor \hfill \insertpagenumber \hfill
+        \vspace{10px}
+    \end{beamercolorbox}
+}
+
+% fonts
+\usefonttheme{structurebold}
+
+% Body
+
+\begin{document}
+
+    % Title
+    {
+    \setbeamertemplate{footline}{}
+    \frame{\titlepage}
+    }
+    \addtocounter{framenumber}{-1}
+
+
+    % TOC
+    \frame{
+        \frametitle{Table of Contents}
+        \tableofcontents
+    }
+    \section{Introduction}
+    \frame{
+        \frametitle{This is the first slide}
+        %Content goes here
+    }
+    \frame{
+        \frametitle{This is the second slide}
+        \framesubtitle{A bit more information about this}
+        %More content goes here
+    }
+    \section{Section 1}
+    \frame{
+        \frametitle{Generic slide}
+        \framesubtitle{A bit more information about this}
+        %More content goes here
+    }
+    \section{Section 2}
+    \frame{
+        \frametitle{Generic slide}
+        \framesubtitle{A bit more information about this}
+        %More content goes here
+    }
+
+    \section{Acknowledgements}
+    \frame{
+        \frametitle{Generic slide}
+        \framesubtitle{A bit more information about this}
+        %More content goes here
+    }
+    \section{Conclusion}
+    \frame{
+        \frametitle{Generic slide}
+        \framesubtitle{A bit more information about this}
+        %More content goes here
+    }
+
+\end{document}
+
