@@ -32,13 +32,20 @@
 
 \begin{document}
 
+
+    % CERN blue splash page slide with white logo
+    \bgroup
+    \setbeamertemplate{navigation symbols}{}
+    \setbeamercolor{background canvas}{bg=bluecern}
+    \frame[plain]{}
+    \egroup
+
     % Title
     {
     \setbeamertemplate{footline}{}
     \frame{\titlepage}
     }
-    \addtocounter{framenumber}{-1}
-
+    \setcounter{framenumber}{0}
 
     % TOC
     \frame{
@@ -80,6 +87,14 @@
         \framesubtitle{A bit more information about this}
         %More content goes here
     }
+
+    \section{}
+    % CERN ending slide with blue logo and web page
+    \bgroup
+    \setbeamertemplate{navigation symbols}{}
+    \setbeamercolor{background canvas}{bg=white}
+    \frame[plain]{}
+    \egroup
 
 \end{document}
 
