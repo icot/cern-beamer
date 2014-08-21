@@ -22,12 +22,18 @@
 % Footline
 \setbeamerfont{footline}{size=\large}
 \setbeamertemplate{footline}{
-    \begin{beamercolorbox}[ht=35px, center]{inverted normal text}
-    \begin{columns}[c]
-    \column{.3\textwidth}
-        \includegraphics[height=26px]{./logos/LogoBadge-02.png} \hfill 
-    \column{.6\textwidth}
-        \inserttitle \hfill \insertshortauthor \hfill \insertpagenumber \hfill
+    \begin{beamercolorbox}[ht=30px, center]{inverted normal text}
+    \begin{columns}
+    \column{.01\textwidth}
+    \column{.15\textwidth}
+        \vspace{5px}
+        \includegraphics[scale=0.85]{./logos/LogoBadge-02.png} 
+    \column{.45\textwidth}
+        \inserttitle
+    \column{.20\textwidth}
+    01/04/2014
+    \column{.1\textwidth}
+        \insertpagenumber
     \end{columns}
     \end{beamercolorbox}
 }
@@ -38,11 +44,13 @@
 % Body
 \begin{document}
 
+    \setbeamertemplate{navigation symbols}{}
+    
     % CERN blue splash page slide with white logo
     \bgroup
-    \setbeamertemplate{navigation symbols}{}
     \setbeamercolor{background canvas}{bg=bluecern}
     \frame[plain]{
+        \centering
         \fcolorbox{bluecern}{white}{\includegraphics[scale=0.9]{./logos/LogoBadge-01.png}}
     }
     \egroup
