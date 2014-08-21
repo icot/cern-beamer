@@ -1,6 +1,8 @@
-% REf: https://en.wikibooks.org/wiki/LaTeX/Presentations
+% Latex Beamer template following CERN template guidelines
 
 \documentclass{beamer}
+\usepackage{xcolor}
+\usepackage{graphicx}
 
 % Preamble
 \title{Stuff we want to talk about}
@@ -15,33 +17,33 @@
 \setbeamercolor{normal text}{fg=bluecern, bg=white}
 \setbeamercolor{title}{fg=bluecern, bg=white}
 \setbeamercolor{inverted normal text}{fg=white, bg=bluecern}
+\setbeamercolor{logo}{bg=white, fg=bluecern}
 
 % Footline
 \setbeamerfont{footline}{size=\large}
 \setbeamertemplate{footline}{
-    \begin{beamercolorbox}[ht=30px, center]{inverted normal text}
+    \begin{beamercolorbox}[ht=35px, center]{inverted normal text}
+    \begin{columns}[c]
+    \column{.3\textwidth}
+        \includegraphics[height=26px]{./logos/LogoBadge-02.png} \hfill 
+    \column{.6\textwidth}
         \inserttitle \hfill \insertshortauthor \hfill \insertpagenumber \hfill
-        \vspace{10px}
+    \end{columns}
     \end{beamercolorbox}
 }
 
 % fonts
 \usefonttheme{structurebold}
 
-% logo
-\logo{\includegraphics{./logos/LogoBadge-02.png}}
-
 % Body
-
 \begin{document}
-
 
     % CERN blue splash page slide with white logo
     \bgroup
     \setbeamertemplate{navigation symbols}{}
     \setbeamercolor{background canvas}{bg=bluecern}
     \frame[plain]{
-        \includegraphics{./logos/LogoBadge-01.png}
+        \fcolorbox{bluecern}{white}{\includegraphics[scale=0.9]{./logos/LogoBadge-01.png}}
     }
     \egroup
 
