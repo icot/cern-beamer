@@ -13,6 +13,9 @@
 % Colors
 \definecolor{bluecern}{HTML}{0053A1}
 \setbeamercolor{normal text}{fg=bluecern, bg=white}
+\setbeamercolor{frametitle}{fg=bluecern, bg=white}
+\setbeamercolor{block title}{fg=bluecern, bg=white}
+\setbeamercolor{section in toc}{fg=bluecern, bg=white}
 \setbeamercolor{title}{fg=bluecern, bg=white}
 \setbeamercolor{inverted normal text}{fg=white, bg=bluecern}
 \setbeamercolor{logo}{bg=white, fg=bluecern}
@@ -74,11 +77,21 @@
     \frame{
         \frametitle{This is the first slide}
         %Content goes here
+        \begin{block}{Ideas}
+            See how this loooks
+        \end{block}
+        \begin{itemize}
+            \item Item 1
+            \item Item 2
+        \end{itemize}
     }
     \frame{
         \frametitle{This is the second slide}
         \framesubtitle{A bit more information about this}
         %More content goes here
+        \begin{alertblock}{Alert block}
+            Alert text
+        \end{alertblock}
     }
     \section{Section 1}
     \frame{
