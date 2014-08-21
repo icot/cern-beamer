@@ -6,11 +6,9 @@
 
 % Preamble
 \title{Stuff we want to talk about}
-\author[A.u.thor]{Guy talking about the stuff \\ \texttt{author@email} \and Guy2}
+\author[A.u.thor]{Guy talking about the stuff \newline \texttt{author@email} \and Guy2}
 \date{\today}
 
-%\useoutertheme{}
-%\useinnertheme{}
 
 % Colors
 \definecolor{bluecern}{HTML}{0053A1}
@@ -26,8 +24,10 @@
     \begin{columns}
     \column{.01\textwidth}
     \column{.15\textwidth}
-        \vspace{5px}
-        \includegraphics[scale=0.85]{./logos/LogoBadge-02.png} 
+        \begin{beamercolorbox}[left, wd=1.35cm]{normal text}
+            \includegraphics[scale=0.7]{./logos/LogoBadge-02.png} 
+        \end{beamercolorbox}
+        \vspace{6px} % To lift logo from bottom
     \column{.45\textwidth}
         \inserttitle
     \column{.20\textwidth}
@@ -44,6 +44,7 @@
 % Body
 \begin{document}
 
+    
     \setbeamertemplate{navigation symbols}{}
     
     % CERN blue splash page slide with white logo
