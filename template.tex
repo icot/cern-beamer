@@ -28,6 +28,9 @@
 % fonts
 \usefonttheme{structurebold}
 
+% logo
+\logo{\includegraphics{./logos/LogoBadge-02.png}}
+
 % Body
 
 \begin{document}
@@ -37,7 +40,9 @@
     \bgroup
     \setbeamertemplate{navigation symbols}{}
     \setbeamercolor{background canvas}{bg=bluecern}
-    \frame[plain]{}
+    \frame[plain]{
+        \includegraphics{./logos/LogoBadge-01.png}
+    }
     \egroup
 
     % Title
@@ -93,7 +98,14 @@
     \bgroup
     \setbeamertemplate{navigation symbols}{}
     \setbeamercolor{background canvas}{bg=white}
-    \frame[plain]{}
+    \frame[plain]{
+        \centering
+        \vspace{10px}
+        \begin{figure}
+            \includegraphics[scale=1.35]{./logos/LogoBadge-02.png} \\
+            \textbf{www.cern.ch}
+        \end{figure}
+    }
     \egroup
 
 \end{document}
