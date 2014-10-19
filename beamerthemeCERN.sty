@@ -46,5 +46,35 @@
     \end{beamercolorbox}
 }
 
+\newcommand{\cernSplashBlue}{
+    % CERN blue splash page slide with white logo
+    \bgroup
+    \setbeamertemplate{navigation symbols}{}
+    \setbeamercolor{background canvas}{bg=bluecern}
+    \frame[plain]{
+        \hfill
+        \vspace{-1.5cm}
+        \includegraphics[scale=0.37]{logos/cern-logo-white-on-blue.png}
+        \hfill\hfill
+    }
+    \egroup
+}
+
+\newcommand{\cernSplashWhite}{
+    % CERN ending slide with blue logo and web page
+    \bgroup
+    \setbeamertemplate{navigation symbols}{}
+    \setbeamercolor{background canvas}{bg=white}
+    \frame[plain]{
+        \centering
+        \vspace{10px}
+        \begin{figure}
+            \includegraphics[scale=.61]{./logos/LogoBadge-01.png} \\
+            {\Large \textbf{www.cern.ch}}
+        \end{figure}
+    }
+    \egroup
+}
+
 \mode
 <all>
