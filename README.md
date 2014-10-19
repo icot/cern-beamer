@@ -17,3 +17,9 @@ Files
  * template.tex - A sample minimal presentation using the template
  * template.pdf - The result of running pdflatex on template.tex
  * logos/ - A folder with the CERN logos used on the template
+
+TODO
+====
+
+ * Find a way to use the original logo files defining an enclosing box with  
+  white background for them 
