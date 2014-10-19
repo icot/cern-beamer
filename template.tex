@@ -8,7 +8,7 @@
 
 % Preamble
 \title{Stuff we want to talk about}
-\author[A.u.thor]{Guy talking about the stuff \newline \texttt{author@email} \and Guy2}
+\author[A.u.thor]{Guy talking about the stuff \newline \texttt{author@email}}
 \date{\today}
 
 
@@ -82,9 +82,24 @@
     % TOC
     \frame{
         \frametitle{Table of Contents}
-        \tableofcontents
+        \begin{multicols}{2}
+            \tableofcontents
+        \end{multicols}
     }
+
+
+
     \section{Introduction}
+    \frame{
+        \frametitle{Table of Contents}
+        \begin{multicols}{2}
+        \tableofcontents[
+            currentsection,
+            sectionstyle=show/shaded,
+            ]
+        \end{multicols}
+    }
+
     \frame{
         \frametitle{This is the first slide}
         %Content goes here
@@ -96,6 +111,7 @@
             \item Item 2
         \end{itemize}
     }
+    \subsection{Intro subsection}
     \frame{
         \frametitle{This is the second slide}
         \framesubtitle{A bit more information about this}
@@ -104,7 +120,18 @@
             Alert text
         \end{alertblock}
     }
+    
     \section{Section 1}
+    \frame{
+        \frametitle{Table of Contents}
+        \begin{multicols}{2}
+        \tableofcontents[
+            currentsection,
+            sectionstyle=show/shaded,
+            ]
+        \end{multicols}
+    }
+
     \frame{
         \frametitle{Generic slide}
         \framesubtitle{A bit more information about this}
@@ -112,18 +139,48 @@
     }
     \section{Section 2}
     \frame{
-        \frametitle{Generic slide}
-        \framesubtitle{A bit more information about this}
-        %More content goes here
+        \frametitle{Table of Contents}
+        \begin{multicols}{2}
+        \tableofcontents[
+            currentsection,
+            sectionstyle=show/shaded,
+            ]
+        \end{multicols}
     }
-
-    \section{Acknowledgements}
     \frame{
         \frametitle{Generic slide}
         \framesubtitle{A bit more information about this}
         %More content goes here
     }
+
+    
     \section{Conclusion}
+    \frame{
+        \frametitle{Table of Contents}
+        \begin{multicols}{2}
+        \tableofcontents[
+            currentsection,
+            sectionstyle=show/shaded,
+            ]
+        \end{multicols}
+    }
+    
+    \frame{
+        \frametitle{Generic slide}
+        \framesubtitle{A bit more information about this}
+        %More content goes here
+    }
+    
+    \section{Acknowledgements}
+    \frame{
+        \frametitle{Table of Contents}
+        \begin{multicols}{2}
+        \tableofcontents[
+            currentsection,
+            sectionstyle=show/shaded,
+            ]
+        \end{multicols}
+    }
     \frame{
         \frametitle{Generic slide}
         \framesubtitle{A bit more information about this}
