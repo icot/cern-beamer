@@ -3,6 +3,8 @@
 \documentclass{beamer}
 \usepackage{xcolor}
 \usepackage{graphicx}
+\usepackage{multicol}
+
 
 % Preamble
 \title{Stuff we want to talk about}
@@ -18,35 +20,41 @@
 \setbeamercolor{title}{fg=bluecern, bg=white}
 \setbeamercolor{inverted normal text}{fg=white, bg=bluecern}
 \setbeamercolor{itemize item}{fg=bluecern}
-
+\setbeamercolor{itemize subitem}{fg=bluecern}
+\setbeamercolor{itemize subsubitem}{fg=bluecern}
+\setbeamercolor{enumerate item}{fg=bluecern}
+\setbeamercolor{enumerate subitem}{fg=bluecern}
+\setbeamercolor{caption name}{fg=bluecern}
 \setbeamercolor{block title}{fg=bluecern, bg=gray!30}
 \setbeamercolor{block body}{fg=bluecern, bg=gray!10}
 \setbeamercolor{block title alerted}{bg=gray!30}
 \setbeamercolor{block body alerted}{bg=gray!10}
 
+% Fonts
+\usefonttheme{structurebold}
+\setbeamerfont{title}{size=\Huge}
+
+% Shapes
+%\setbeamertemplate{itemize item}[square]
+
 % Footline
 \setbeamerfont{footline}{size=\large}
 \setbeamertemplate{footline}{
-    \begin{beamercolorbox}[ht=30px, center]{inverted normal text}
+    \begin{beamercolorbox}[ht=20px, center]{inverted normal text}
     \begin{columns}
-    \column{.01\textwidth}
+    \column{.001\textwidth}
     \column{.15\textwidth}
-        \begin{beamercolorbox}[left, wd=1.35cm]{normal text}
-            \includegraphics[scale=0.7]{./logos/LogoBadge-02.png} 
-        \end{beamercolorbox}
-        \vspace{6px} % To lift logo from bottom
+        \vspace{2px} % To lift logo from bottom
+        \includegraphics[scale=0.35]{logos/cern-logo-small.png}
     \column{.45\textwidth}
-        \inserttitle
+        \insertshorttitle
     \column{.20\textwidth}
-    01/04/2014
+    01/10/2014
     \column{.1\textwidth}
         \insertpagenumber
     \end{columns}
     \end{beamercolorbox}
 }
-
-% fonts
-\usefonttheme{structurebold}
 
 % Body
 \begin{document}
@@ -57,9 +65,8 @@
     \setbeamercolor{background canvas}{bg=bluecern}
     \frame[plain]{
         \hfill
-        \begin{beamercolorbox}[wd=4.5cm]{normal text}
-            \includegraphics[scale=0.9]{./logos/LogoBadge-01.png}
-        \end{beamercolorbox}
+        \vspace{-1.5cm}
+        \includegraphics[scale=0.52]{logos/cern-logo-white-on-blue.png}
         \hfill\hfill
     }
     \egroup
@@ -133,7 +140,7 @@
         \vspace{10px}
         \begin{figure}
             \includegraphics[scale=.8]{./logos/LogoBadge-01.png} \\
-            \textbf{www.cern.ch}
+            {\Large \textbf{www.cern.ch}}
         \end{figure}
     }
     \egroup
