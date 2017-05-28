@@ -4,6 +4,7 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{multicol}
+\usepackage{tikz}
 
 \usetheme{CERN}
 
@@ -61,6 +62,19 @@
             \item Item 2
         \end{itemize}
     }
+
+	% This block includes a picture full slide
+	{ % all template changes are local to this group.
+		\setbeamertemplate{navigation symbols}{}
+		\begin{frame}[plain]
+			\begin{tikzpicture}[remember picture,overlay]
+			\node[at=(current page.center)] {
+				\includegraphics[width=\paperwidth]{images/image.png}
+			};
+			\end{tikzpicture}
+		\end{frame}
+	}
+
     \subsection{Intro subsection}
     \frame{
         \frametitle{This is the second slide}
