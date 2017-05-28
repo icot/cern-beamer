@@ -6,6 +6,10 @@
 \usepackage{multicol}
 \usepackage{tikz}
 
+% Code listings with syntax highlighting
+%  Require Pygments
+\usepackage{minted}
+
 \usetheme{CERN}
 
 % Talk date
@@ -74,6 +78,29 @@
 			\end{tikzpicture}
 		\end{frame}
 	}
+
+    % This slide has code block with syntax highlighting using the Minted package
+    %  Minted requires Pygments and building the PDF with the --shell-escape argument
+    %  for pdflatex
+    \begin{frame}[fragile]
+        \frametitle{This slide has code blocks}
+		\begin{minted}[
+			frame=lines,
+			framesep=2mm,
+			baselinestretch=1.2,
+			fontsize=\footnotesize,
+			linenos
+			]{python}
+        import numpy as np
+         
+        def incmatrix(genl1,genl2):
+            m = len(genl1)
+            n = len(genl2)
+            M = None #to become the incidence matrix
+            VT = np.zeros((n*m,1), int)  #dummy variable
+        \end{minted}
+    \end{frame}
+
 
     \subsection{Intro subsection}
     \frame{
