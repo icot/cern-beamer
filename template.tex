@@ -12,6 +12,32 @@
 
 \usetheme{CERN}
 
+\newcommand{\interludeTitle}{We are here!}
+\AtBeginSection[] {
+    \frame{
+	\frametitle{\interludeTitle}
+      \begin{multicols}{2}
+        \tableofcontents[
+            currentsection,
+            sectionstyle=show/shaded,
+            ]
+	  \end{multicols}
+    }
+}
+
+\AtBeginSubsection[] {
+	  \frame{
+		\frametitle{\interludeTitle}
+		\begin{multicols}{2}
+        \tableofcontents[
+            currentsubsection,
+            subsectionstyle=show/shaded,
+            ]
+		\end{multicols}
+	  }
+}
+
+
 % Talk date
 % Uncomment this to define a presentation date distinct from \today
 % \def\mydate{20 Feb 2000}
@@ -45,15 +71,6 @@
 
 
     \section{Introduction}
-    \frame{
-        \frametitle{Table of Contents}
-        \begin{multicols}{2}
-        \tableofcontents[
-            currentsection,
-            sectionstyle=show/shaded,
-            ]
-        \end{multicols}
-    }
 
     \frame{
         \frametitle{This is the first slide}
@@ -113,15 +130,6 @@
     }
     
     \section{Section 1}
-    \frame{
-        \frametitle{Table of Contents}
-        \begin{multicols}{2}
-        \tableofcontents[
-            currentsection,
-            sectionstyle=show/shaded,
-            ]
-        \end{multicols}
-    }
 
     \frame{
         \frametitle{Generic slide}
@@ -129,15 +137,7 @@
         %More content goes here
     }
     \section{Section 2}
-    \frame{
-        \frametitle{Table of Contents}
-        \begin{multicols}{2}
-        \tableofcontents[
-            currentsection,
-            sectionstyle=show/shaded,
-            ]
-        \end{multicols}
-    }
+
     \frame{
         \frametitle{Generic slide}
         \framesubtitle{A bit more information about this}
@@ -146,15 +146,6 @@
 
     
     \section{Conclusion}
-    \frame{
-        \frametitle{Table of Contents}
-        \begin{multicols}{2}
-        \tableofcontents[
-            currentsection,
-            sectionstyle=show/shaded,
-            ]
-        \end{multicols}
-    }
     
     \frame{
         \frametitle{Generic slide}
@@ -163,15 +154,7 @@
     }
     
     \section{Acknowledgements}
-    \frame{
-        \frametitle{Table of Contents}
-        \begin{multicols}{2}
-        \tableofcontents[
-            currentsection,
-            sectionstyle=show/shaded,
-            ]
-        \end{multicols}
-    }
+    
     \frame{
         \frametitle{Generic slide}
         \framesubtitle{A bit more information about this}
