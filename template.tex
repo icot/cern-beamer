@@ -4,10 +4,14 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{multicol}
+\usepackage{tikz}
+
+% Code listings with syntax highlighting
+%  Require Pygments
+\usepackage{minted}
 
 \usetheme{CERN}
 
-%
 \newcommand{\interludeTitle}{We are here!}
 \AtBeginSection[] {
     \frame{
@@ -33,10 +37,15 @@
 	  }
 }
 
+
+% Talk date
+% Uncomment this to define a presentation date distinct from \today
+% \def\mydate{20 Feb 2000}
+
 % Preamble
-\title[]{Stuff we want to talk about}
-\author[A.u.thor]{Guy talking about the stuff \newline \texttt{author@email}}
-\date{\today}
+\title[]{Title}
+\subtitle{Subtitle}
+\author[Author]{\texorpdfstring{\url{name.surname@cern.ch}}{Author}}
 
 % Body
 \begin{document}
@@ -74,6 +83,42 @@
             \item Item 2
         \end{itemize}
     }
+
+	% This block includes a picture full slide
+	{ % all template changes are local to this group.
+		\setbeamertemplate{navigation symbols}{}
+		\begin{frame}[plain]
+			\begin{tikzpicture}[remember picture,overlay]
+			\node[at=(current page.center)] {
+				\includegraphics[width=\paperwidth]{images/image.png}
+			};
+			\end{tikzpicture}
+		\end{frame}
+	}
+
+    % This slide has code block with syntax highlighting using the Minted package
+    %  Minted requires Pygments and building the PDF with the --shell-escape argument
+    %  for pdflatex
+    \begin{frame}[fragile]
+        \frametitle{This slide has code blocks}
+		\begin{minted}[
+			frame=lines,
+			framesep=2mm,
+			baselinestretch=1.2,
+			fontsize=\footnotesize,
+			linenos
+			]{python}
+        import numpy as np
+         
+        def incmatrix(genl1,genl2):
+            m = len(genl1)
+            n = len(genl2)
+            M = None #to become the incidence matrix
+            VT = np.zeros((n*m,1), int)  #dummy variable
+        \end{minted}
+    \end{frame}
+
+
     \subsection{Intro subsection}
     \frame{
         \frametitle{This is the second slide}
