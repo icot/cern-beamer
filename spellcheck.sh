@@ -1,22 +1,17 @@
-all:
-	rm -f template.aux template.toc template.snm
-	pdflatex -shell-escape template.tex
-	pdflatex -shell-escape template.tex
-	pdflatex -shell-escape template.tex
+#!/bin/bash
+echo "checking file $1"
+if [[ $(cat $1 | aspell list --encoding=utf-8 -t -d en -p ./.aspell.en.pws | wc -l) -eq 0 ]]
+then
+  exit 0
+else
+  echo "spellcheck of $1 failed due to:"
+  cat $1 | aspell list --encoding=utf-8 -t -d en -p ./.aspell.en.pws | tee -a spelling-mistakes.txt
+  exit 1
+fi
 
-quick:
-	pdflatex -shell-escape template.tex
+# verbatim copy from lb-aspell-example
 
-clean:
-	rm -rf template.aux template.log template.nav template.out template.snm template.toc template.vrb
-
-printviews:
-	pdfnup --nup '2x2' template.pdf
-	gs -sOutputFile=template-nup-gray.pdf -sDEVICE=pdfwrite -sColorConversionStrategy=Gray -dProcessColorModel=/DeviceGray -dCompatibilityLevel=1.4 -dNOPAUSE -dBATCH template-nup.pdf
-
-include aspell.mk
-
-# This is a modified version of the Makefile in https://gitlab.cern.ch/pseyfert/cern-slide-template
+# lb-aspell-example, example for how to use lb-aspell with the LHCb template
 # Copyright (C) 2017  Paul Seyfert <pseyfert@cern.ch>
 
 # This program is free software: you can redistribute it and/or modify
