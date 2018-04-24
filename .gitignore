@@ -1,0 +1,16 @@
+_minted-template
+*.tex.bak
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+
+*.vrb
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+*.bbl
+
