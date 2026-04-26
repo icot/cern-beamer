@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "cern_beamer",
+  "project_id": "21128bf4-e980-42fb-b144-24bfae8ace0e"
+}
