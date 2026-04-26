@@ -42,17 +42,17 @@
 }
 
 % Footline
-\setbeamerfont{footline}{size=\large}
+\setbeamerfont{footline}{size=\small, series=\mdseries}
 \setbeamertemplate{footline}{
     \begin{beamercolorbox}[ht=20pt, center]{inverted normal text}
     \begin{columns}
     \column{.001\textwidth}
     \column{.15\textwidth}
-        \vspace{2pt} % To lift logo from bottom
-        \includegraphics[scale=0.35]{logos/cern-logo-small.png}
-    \column{.45\textwidth}
-        \insertshorttitle
-    \column{.20\textwidth}
+        \vspace{2pt}
+        \hspace{3.5pt}\includegraphics[scale=0.35]{logos/cern-logo-small.png}\hspace{3.5pt}
+    \column{.50\textwidth}
+        \insertshortauthor~|~\insertshorttitle
+    \column{.15\textwidth}
 	\talkdate
     \column{.1\textwidth}
         \insertpagenumber
