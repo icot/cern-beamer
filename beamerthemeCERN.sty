@@ -1,7 +1,6 @@
 \mode<presentation>
 
 \usecolortheme{default}
-\usecolortheme{default}
 \useinnertheme{default}
 \useoutertheme{default}
 
@@ -45,11 +44,11 @@
 % Footline
 \setbeamerfont{footline}{size=\large}
 \setbeamertemplate{footline}{
-    \begin{beamercolorbox}[ht=20px, center]{inverted normal text}
+    \begin{beamercolorbox}[ht=20pt, center]{inverted normal text}
     \begin{columns}
     \column{.001\textwidth}
     \column{.15\textwidth}
-        \vspace{2px} % To lift logo from bottom
+        \vspace{2pt} % To lift logo from bottom
         \includegraphics[scale=0.35]{logos/cern-logo-small.png}
     \column{.45\textwidth}
         \insertshorttitle
@@ -92,7 +91,7 @@
     \setbeamercolor{background canvas}{bg=white}
     \frame[plain]{
         \centering
-        \vspace{10px}
+        \vspace{10pt}
         \begin{figure}
             \includegraphics[scale=.61]{./logos/LogoBadge-01.png} \\
             {\Large \textbf{www.cern.ch}}
@@ -101,5 +100,4 @@
     \egroup
 }
 
-\mode
-<all>
+\mode<all>{}
