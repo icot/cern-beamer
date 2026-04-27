@@ -1,8 +1,9 @@
+\ProvidesPackage{beamerthemeCERN}[2024/01/01 CERN Beamer Theme]
+
 \mode<presentation>
 
 \usecolortheme{default}
-\useinnertheme{default}
-\useoutertheme{default}
+\setbeamertemplate{navigation symbols}{}
 
 % Colors
 \definecolor{bluecern}{HTML}{0053A1}
@@ -19,7 +20,7 @@
 \setbeamercolor{caption name}{fg=bluecern}
 \setbeamercolor{block title}{fg=bluecern, bg=gray!30}
 \setbeamercolor{block body}{fg=bluecern, bg=gray!10}
-\setbeamercolor{block title alerted}{bg=gray!30}
+\setbeamercolor{block title alerted}{fg=bluecern, bg=gray!30}
 \setbeamercolor{block body alerted}{bg=gray!10}
 
 % Fonts
@@ -37,7 +38,7 @@
         \vfill
         \insertauthor
         \vfill
-        \talkdate 
+        \insertdate
     \end{center}
 }
 
@@ -53,50 +54,38 @@
     \column{.50\textwidth}
         \insertshortauthor~|~\insertshorttitle
     \column{.15\textwidth}
-	\talkdate
+	\insertdate
     \column{.1\textwidth}
         \insertpagenumber
     \end{columns}
     \end{beamercolorbox}
 }
 
-\newcommand{\talkdate}{
-  \@ifundefined{mydate}
-	{
-	\today
-	}
-	{
-	\mydate
-	}
-}
-
 \newcommand{\cernSplashBlue}{
     % CERN blue splash page slide with white logo
     \bgroup
-    \setbeamertemplate{navigation symbols}{}
     \setbeamercolor{background canvas}{bg=bluecern}
-    \frame[plain]{
+    \begin{frame}[plain]
         \hfill
         \vspace{-1.5cm}
         \includegraphics[scale=0.37]{logos/cern-logo-white-on-blue.png}
         \hfill\hfill
-    }
+    \end{frame}
     \egroup
 }
 
 \newcommand{\cernSplashWhite}{
     % CERN ending slide with blue logo and web page
     \bgroup
-    \setbeamertemplate{navigation symbols}{}
     \setbeamercolor{background canvas}{bg=white}
-    \frame[plain]{
+    \begin{frame}[plain]
         \centering
         \vspace{10pt}
         \begin{figure}
             \includegraphics[scale=.61]{./logos/LogoBadge-01.png} \\
             {\Large \textbf{www.cern.ch}}
         \end{figure}
-    }
+    \end{frame}
     \egroup
 }
 

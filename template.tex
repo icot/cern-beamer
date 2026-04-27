@@ -5,72 +5,71 @@
 \usepackage{tikz}
 
 % Code listings with syntax highlighting
-%  Require Pygments
+%  Require Pygments and --shell-escape flag for pdflatex
 \usepackage{minted}
 
 \usetheme{CERN}
 
 \newcommand{\interludeTitle}{We are here!}
 \AtBeginSection[] {
-    \frame{
-	\frametitle{\interludeTitle}
-      \begin{multicols}{2}
-        \tableofcontents[
-            currentsection,
-            sectionstyle=show/shaded,
-            ]
-	  \end{multicols}
-    }
+    \begin{frame}
+        \frametitle{\interludeTitle}
+        \begin{multicols}{2}
+            \tableofcontents[
+                currentsection,
+                sectionstyle=show/shaded,
+                ]
+        \end{multicols}
+    \end{frame}
 }
 
 \AtBeginSubsection[] {
-	  \frame{
-		\frametitle{\interludeTitle}
-		\begin{multicols}{2}
-        \tableofcontents[
-            currentsubsection,
-            subsectionstyle=show/shaded,
-            ]
-		\end{multicols}
-	  }
+    \begin{frame}
+        \frametitle{\interludeTitle}
+        \begin{multicols}{2}
+            \tableofcontents[
+                currentsubsection,
+                subsectionstyle=show/shaded,
+                ]
+        \end{multicols}
+    \end{frame}
 }
 
-
-% Talk date
-% Uncomment this to define a presentation date distinct from \today
-% \def\mydate{20 Feb 2000}
 
 % Preamble
 \title[Title]{Title}
 \subtitle{Subtitle}
 \author[Author]{\href{mailto:name.surname@cern.ch}{name.surname@cern.ch}}
+\date{\today}
+% \date{20 Feb 2000}
 
 % Body
 \begin{document}
-    
+
     \cernSplashBlue
 
     % Title
     {
     \setbeamertemplate{footline}{}
-    \setbeamertemplate{navigation symbols}{}
-    \frame{\titlepage}
+    \begin{frame}
+        \titlepage
+    \end{frame}
     }
     \setcounter{framenumber}{0}
 
     % TOC
-    \frame{
+    \begin{frame}
         \frametitle{Table of Contents}
         \begin{multicols}{2}
             \tableofcontents
         \end{multicols}
-    }
+    \end{frame}
 
 
 
     \section{Introduction}
 
-    \frame{
+    \begin{frame}
         \frametitle{This is the first slide}
         %Content goes here
         \begin{block}{Ideas}
@@ -80,11 +79,10 @@
             \item Item 1
             \item Item 2
         \end{itemize}
-    }
+    \end{frame}
 
 	% This block includes a picture full slide
 	{ % all template changes are local to this group.
-		\setbeamertemplate{navigation symbols}{}
 		\begin{frame}[plain]
 			\begin{tikzpicture}[remember picture,overlay]
 			\node[at=(current page.center)] {
@@ -118,48 +116,48 @@ def incmatrix(genl1,genl2):
 
 
     \subsection{Intro subsection}
-    \frame{
+    \begin{frame}
         \frametitle{This is the second slide}
         \framesubtitle{A bit more information about this}
         %More content goes here
         \begin{alertblock}{Alert block}
             Alert text
         \end{alertblock}
-    }
-    
+    \end{frame}
+
     \section{Section 1}
 
-    \frame{
+    \begin{frame}
         \frametitle{Generic slide}
         \framesubtitle{A bit more information about this}
         %More content goes here
-    }
+    \end{frame}
+
     \section{Section 2}
 
-    \frame{
+    \begin{frame}
         \frametitle{Generic slide}
         \framesubtitle{A bit more information about this}
         %More content goes here
-    }
+    \end{frame}
 
-    
+
     \section{Conclusion}
-    
-    \frame{
+
+    \begin{frame}
         \frametitle{Generic slide}
         \framesubtitle{A bit more information about this}
         %More content goes here
-    }
-    
+    \end{frame}
+
     \section{Acknowledgements}
-    
-    \frame{
+
+    \begin{frame}
         \frametitle{Generic slide}
         \framesubtitle{A bit more information about this}
         %More content goes here
-    }
+    \end{frame}
 
     \cernSplashWhite
 
 \end{document}
-
