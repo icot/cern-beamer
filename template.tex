@@ -4,11 +4,25 @@
 \usepackage{multicol}
 \usepackage{tikz}
 
-% Code listings with syntax highlighting
-%  Require Pygments and --shell-escape flag for pdflatex
+% Code listings with syntax highlighting via minted
+%  Requires: pip install Pygments
+%  Build with: pdflatex --shell-escape template.tex
+%
+% Zero-dependency alternative: comment out minted and uncomment listings below
+% \usepackage{listings}
+% \lstset{basicstyle=\ttfamily\footnotesize, numbers=left, frame=lines}
 \usepackage{minted}
 
 \usetheme{CERN}
+
+\hypersetup{
+    pdftitle={Title},
+    pdfauthor={Author},
+    pdfsubject={},
+    colorlinks=true,
+    linkcolor=bluecern,
+    urlcolor=bluecern,
+}
 
 \newcommand{\interludeTitle}{We are here!}
 \AtBeginSection[] {
